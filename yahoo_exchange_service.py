@@ -1,4 +1,4 @@
-#!/usr/bin/python3.4
+#!/usr/bin/env python3
 
 from exchange_rate import ExchangeRate
 from exceptions import HTTPPageNotAvailableError
