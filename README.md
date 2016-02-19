@@ -43,6 +43,13 @@ Výstup
     }
 }
 ```
+
+# Testy
+Jednoduché testy sa dajú spustiť s 
+```sh
+$./tests.py
+```
+
 [Finance Yahoo]: <https://finance.yahoo.com>
 [all currencies]: <http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote?format=json>
 
