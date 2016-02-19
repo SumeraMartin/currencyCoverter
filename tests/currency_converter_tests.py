@@ -2,6 +2,7 @@
 
 import unittest
 import time
+import shutil
 
 from available_currencies import writeCurrenciesIntoCacheFile
 from currencies_rate_cache import writeRatesIntoCache
@@ -19,6 +20,9 @@ class CurrencyConverterTest(unittest.TestCase):
         rateToGBP = ExchangeRate("USD", "GBP", 0.50, validUntil = validUntilTime)
         rateToUSD = ExchangeRate("USD", "USD", 1.00, validUntil = validUntilTime)
         writeRatesIntoCache("USD", [rateToEUR, rateToGBP, rateToUSD])
+
+    def tearDown(self):        
+        shutil.rmtree('.cache')
         
     def test(self):
         self.parseDataFromCache("USD", "EUR", 1, 2.5)
